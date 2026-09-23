@@ -21,11 +21,10 @@
 13)   контекстная ссылка в тексте абзаца: <br>Подробнее о вузе можно узнать на <a href="https://kubsu.ru/">официальном сайте КубГУ</a>, там есть вся информация.<br>
 14)   <a href="https://ru.wikipedia.org/wiki/HTML#История">ссылка на фрагмент страницы стороннего сайта</a><br>
 15)    ссылки из прямоугольных и круглых областей картинки:<br>
-<img src="https://placekitten.com/240/120" alt="Карта ссылок" width="240" height="120" usemap="#kubsu-map"><br>
-<map name="kubsu-map">
-    <area shape="rect" coords="0,0,120,120" href="https://kubsu.ru/" alt="Прямоугольная область">
-    <area shape="circle" coords="180,60,55" href="https://kubsu.ru/about" alt="Круглая область">
-</map>
+<div style="position: relative; width: 240px; height: 120px; border: 1px solid black;">
+            <a href="https://kubsu.ru/" style="position: absolute; left: 0;top:0 ;with: 120px; height: 120px; border:2px solid black;box-sizing: border-box;" ></a>
+            <a href="https://kubsu.ru/about" style="position: absolute; left: 125px; top:5px; width: 110px; height:110px;border: 2px solid black;border-radius:50%;box-sizing: border-box;"></a>
+        </div>
 <br>
 16) <a href="">ссылка с пустым href</a><br>
 17) <a>Ссылка без href</a><br>
@@ -64,7 +63,7 @@
 
     <p>
         <label for="birthdate">4. Дата рождения:</label><br>
-        <input type="date" id="birthdate" name="birthdate" required>
+        <input type="date" id="birthdate" name="birthdate" name="birthdate" required max="2026-12-31>
     </p>
 
     <p>5. Пол:</p>
@@ -116,6 +115,14 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
         e.preventDefault();
     } else {
         langErr.style.display = "none";
+    }
+
+    const birthdate = document.getElementById("birthdate").value;
+
+    if(birthdate && birthdate>= "20226-01-01")
+    {
+        alert("Дату рождения должна быть раньше 2026 года.");
+        e.preventDefault();
     }
 });
 </script>
