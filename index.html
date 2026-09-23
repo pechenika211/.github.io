@@ -8,7 +8,7 @@
 <body>
 1)    <a href="https://kubsu.ru/">абсолютную гиперссылку на главную страницу сайта kubsu.ru </a><br>
 2)    <a href="https://www/kubsu.ru/">абсолютную на главную сайта kubsu.ru в протоколе https</a><br>
-3)    <a href="https://kubsu.ru/"><img src="https://sun9-53.vkuserphoto.ru/impg/0OQM-6YoYJNeTwLBMdcRtUrnPEg8uD3LZp5xhg/7f8tFk0d80s.jpg?quality=90&proxy=1&sign=675e13145171a3ecc0bb13ff55d19bb3&type=video_thumb" alt="Котик" width="200" height="120"></a> — ссылка-изображение<br>
+3)    <a href="https://kubsu.ru/"><img src="https://sun9-53.vkuserphoto.ru/impg/0OQM-6YoYJNeTwLBMdcRtUrnPEg8uD3LZp5xhg/7f8tFk0d80s.jpg?quality=90&proxy=1&sign=675e13145171a3ecc0bb13ff55d19bb3&type=video_thumb"  alt="Котик" width="200" height="120"></a> — ссылка-изображение<br>
 4)    <a href="/about"> сокращенную ссылку на внутреннюю страницу</a><br>
 5)    <a href="/">сокращенную ссылку на главную страницу</a><br>
 6)    <a href="#top">Ссылка на фрагмент текущей страницы (наверх)</a><br>
@@ -21,7 +21,7 @@
 13)   контекстная ссылка в тексте абзаца: <br>Подробнее о вузе можно узнать на <a href="https://kubsu.ru/">официальном сайте КубГУ</a>, там есть вся информация.<br>
 14)   <a href="https://ru.wikipedia.org/wiki/HTML#История">ссылка на фрагмент страницы стороннего сайта</a><br>
 15)    ссылки из прямоугольных и круглых областей картинки:<br>
-<div style="position: relative; width: 240px; height: 120px; border: 1px solid black;">
+        <div style="position: relative; width: 240px; height: 120px; border: 1px solid black;">
             <a href="https://kubsu.ru/" style="position: absolute; left: 0;top:0 ;with: 120px; height: 120px; border:2px solid black;box-sizing: border-box;" ></a>
             <a href="https://kubsu.ru/about" style="position: absolute; left: 125px; top:5px; width: 110px; height:110px;border: 2px solid black;border-radius:50%;box-sizing: border-box;"></a>
         </div>
@@ -116,7 +116,6 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
     } else {
         langErr.style.display = "none";
     }
-
     const birthdate = document.getElementById("birthdate").value;
 
     if(birthdate && birthdate>= "20226-01-01")
